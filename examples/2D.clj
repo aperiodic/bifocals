@@ -44,7 +44,7 @@
   ; You must call this in the draw function. Otherwise, your depth image will be
   ; all black, and user/skeleton tracking will not work.
   (bifocals/tick)
-  (image (bifocals/image) 0 0)
+  (image (bifocals/depth-image) 0 0)
   (no-stroke)
   (fill 0 255 0 128)
   ; The uids of the on-screen users are stored in a set at the
