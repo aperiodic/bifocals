@@ -19,9 +19,13 @@ adapter][2] for your kinect.
 Bifocals is available from clojars. Add `[bifocals "0.0.1"]` to your project.clj
 then `(:require [bifocals.core :as bifocals)` in your `ns` statement.
 
-There are some well-commented examples of using bifocals in the `examples`
-folder. Additionally, all the functions and vars in the core namespace have
-docstrings.
+There are some well-commented examples of using bifocals in the examples
+folder. To run the examples from this repo, first run `lein compile` to compile
+the java wrapper. Then fire up a REPL (`lein repl`) and type, e.g.,
+`(use 'bifocals.examples.2D)`.
+
+All public functions and vars in the core namespace have docstrings (generated
+documentation forthcoming: having some issues with autodoc and classpaths).
 
 ## License
 
