@@ -16,7 +16,7 @@ adapter][2] for your kinect.
 
 ## Usage
 
-Bifocals is available from clojars. Add `[bifocals "0.0.1"]` to your project.clj
+Bifocals is available from clojars. Add `[bifocals "0.0.2"]` to your project.clj
 then `(:require [bifocals.core :as bifocals)` in your `ns` statement.
 
 There are some well-commented examples of using bifocals in the examples
