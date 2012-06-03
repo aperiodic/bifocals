@@ -27,9 +27,8 @@ docstrings.
 
 Copyright (C) 2012 Dan Lidral-Porter
 
-The Java wrapper bifocals uses to do communicate with OpenNI is a slightly
-modified [SimpleOpenNI][3], which is (C) 2011 Max Rheiner / Interaction Design
-Zhdk.
+The Java wrapper bifocals uses to communicate with OpenNI is a slightly modified
+[SimpleOpenNI][3], which is (C) 2011 Max Rheiner / Interaction Design Zhdk.
 
 [3]: http://code.google.com/p/simple-openni/
 
