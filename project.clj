@@ -1,4 +1,4 @@
-(defproject bifocals "0.1.0-SNAPSHOT"
+(defproject bifocals "0.1.0"
   :description "A kinect library for quil."
   :url "http://github.com/aperiodic/bifocals"
   :dependencies [[org.clojure/clojure "1.3.0"]
