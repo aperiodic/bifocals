@@ -8,9 +8,6 @@
 
 (defn setup []
   (smooth)
-  ; This function connects to the kinect. You must call it first. Otherwise,
-  ; there will be NPEs.
-  (bifocals/setup)
   (frame-rate 30))
 
 (defn draw-line
@@ -41,8 +38,8 @@
 
 (defn draw []
   (background 0)
-  ; You must call this in the draw function. Otherwise, your depth image will be
-  ; all black, and user/skeleton tracking will not work.
+  ; You must call `bifocals/tick` in the draw function. Otherwise, your depth
+  ; image will be all black, and user & skeleton tracking will not work.
   (bifocals/tick)
   (image (bifocals/depth-image) 0 0)
   (no-stroke)
