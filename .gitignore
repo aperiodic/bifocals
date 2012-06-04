@@ -8,7 +8,6 @@
 /.lein-deps-sum
 /.lein-plugins
 /target
-/autodoc
 *.swp
 *.swo
 .DS_Store

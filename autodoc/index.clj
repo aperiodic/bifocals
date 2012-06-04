@@ -1,0 +1,76 @@
+{:namespaces
+ ({:source-url nil,
+   :wiki-url "bifocals.core-api.html",
+   :name "bifocals.core",
+   :doc nil}
+  {:source-url nil,
+   :wiki-url "bifocals.event-api.html",
+   :name "bifocals.event",
+   :doc nil}
+  {:source-url nil,
+   :wiki-url "bifocals.skeleton-api.html",
+   :name "bifocals.skeleton",
+   :doc nil}),
+ :vars
+ ({:arglists ([coords]),
+   :name "project",
+   :namespace "bifocals.core",
+   :source-url nil,
+   :raw-source-url nil,
+   :wiki-url "/bifocals.core-api.html#bifocals.core/project",
+   :doc "Projects 3D coordinates into depth image coordinates.",
+   :var-type "function",
+   :line 119,
+   :file "src/bifocals/core.clj"}
+  {:arglists ([skeleton]),
+   :name "project-skeleton",
+   :namespace "bifocals.core",
+   :source-url nil,
+   :raw-source-url nil,
+   :wiki-url "/bifocals.core-api.html#bifocals.core/project-skeleton",
+   :doc
+   "Projects the given skeleton from 3D coordinates into depth image coordinates.\nThis lets you, for example, draw the user's skeleton on the depth image.",
+   :var-type "function",
+   :line 124,
+   :file "src/bifocals/core.clj"}
+  {:file "src/bifocals/core.clj",
+   :raw-source-url nil,
+   :source-url nil,
+   :wiki-url "/bifocals.core-api.html#bifocals.core/skeletons",
+   :namespace "bifocals.core",
+   :line 17,
+   :var-type "var",
+   :doc
+   "Contains the skeletons of all calibrated users, keyed by uid. Each skeleton\nis just a map whose keys are joint keywords and whose values are 3D\ncoordinates (that is, a map with :x, :y, and :z keys).",
+   :name "skeletons"}
+  {:file "src/bifocals/core.clj",
+   :raw-source-url nil,
+   :source-url nil,
+   :wiki-url "/bifocals.core-api.html#bifocals.core/users",
+   :namespace "bifocals.core",
+   :line 13,
+   :var-type "var",
+   :doc "Contains the uids of all on-screen users.",
+   :name "users"}
+  {:arglists ([kinect {:keys [x y z]}]),
+   :name "project",
+   :namespace "bifocals.skeleton",
+   :source-url nil,
+   :raw-source-url nil,
+   :wiki-url "/bifocals.skeleton-api.html#bifocals.skeleton/project",
+   :doc
+   "Project a skeleton joint position from the 3D coordinates into depth image\ncoordinates. This lets you, for example, draw the user's skeleton on top of\nthe depth image.",
+   :var-type "function",
+   :line 39,
+   :file "src/bifocals/skeleton.clj"}
+  {:arglists ([kinect uid]),
+   :name "skeleton",
+   :namespace "bifocals.skeleton",
+   :source-url nil,
+   :raw-source-url nil,
+   :wiki-url "/bifocals.skeleton-api.html#bifocals.skeleton/skeleton",
+   :doc
+   "Retrieves the skeleton for the user with the given uid. If that user's\nskeleton is being tracked, then this will return a map whose keys are joint\nkeywords and whose values are maps corresponding to the 3D coordinates of the\njoints. The maps have :x, :y, and :z keys, and floats for values.",
+   :var-type "function",
+   :line 20,
+   :file "src/bifocals/skeleton.clj"})}
