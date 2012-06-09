@@ -27,6 +27,14 @@ the java wrapper. Then fire up a REPL (`lein repl`) and type, e.g.,
 All public functions and vars in the core namespace have docstrings (generated
 documentation forthcoming: having some issues with autodoc and classpaths).
 
+## Troubleshooting
+
+* You must have the same version of SimpleOpenNI installed and specified in 
+bifocals/project.clj
+
+* The SimpleOpenNI JNI library must be on your classpath. One way to do this is to 
+put it in the appropriate location in the native directory in your project.
+
 ## License
 
 Copyright (C) 2012 Dan Lidral-Porter
