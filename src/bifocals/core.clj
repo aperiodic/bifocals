@@ -53,6 +53,14 @@
       (throw (new Error (str "Couldn't set up the kinect object! Are you sure "
                              "it's plugged in to both your computer and "
                              "power?"))))
+    (when-not (.enableScene kinect)
+      (throw (new Error (str "Couldn't set up the kinect object! Are you sure "
+                             "it's plugged in to both your computer and "
+                             "power?"))))
+        (when-not (.enableRGB kinect)
+      (throw (new Error (str "Couldn't set up the kinect object! Are you sure "
+                             "it's plugged in to both your computer and "
+                             "power?"))))
     (when-not @kinect-atom
       (swap! kinect-atom (constantly kinect)))
     (.setMirror kinect true)
@@ -111,6 +119,22 @@
 (defn scene-height []
   "The height of the scene image, in pixels."
   (.sceneHeight (kinect)))
+
+
+(defn rgb-image []
+  "The rgb image is from the kinect's color camera. It is a PImage, so quil
+  will be able to handle it no problem, but pure clojure consumers should brace
+  themselves for interop and check out the PImage javadocs at
+  http://processing.googlecode.com/svn/trunk/processing/build/javadoc/core/index.html"
+  (.rgbImage (kinect)))
+
+(defn rgb-width []
+  "The width of the rgb image, in pixels."
+  (.rgbWidth (kinect)))
+
+(defn rgb-height []
+  "The height of the rgb image, in pixels."
+  (.rgbHeight (kinect)))
 
 (defn toggle-mirrored []
   "Toggle mirroring of the depth and scene images (they are mirrored by default)"
