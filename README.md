@@ -16,7 +16,7 @@ adapter][2] for your kinect.
 
 ## Usage
 
-Bifocals is available from clojars. Add `[bifocals "0.0.2"]` to your project.clj
+Bifocals is available from clojars. Add `[bifocals "0.1.0"]` to your project.clj
 then `(:require [bifocals.core :as bifocals)` in your `ns` statement.
 
 There are some well-commented examples of using bifocals in the examples
@@ -26,6 +26,13 @@ the java wrapper. Then fire up a REPL (`lein repl`) and type, e.g.,
 
 All public functions and vars in the core namespace have docstrings (generated
 documentation forthcoming: having some issues with autodoc and classpaths).
+
+Currently, it appears Leiningen 2 does not work properly with native libraries. 
+I suggest using Leinigen 1. If you must use Leiningen 2, the SimpleOpenNI JNI 
+library must be on your classpath and must be the same version as specified 
+in `bifocals/project.clj`. One way to put the JNI library on your classpath 
+is to put it in the appropriate location in the native directory in your project 
+(e.g. `native/macosx\x86_64`).
 
 ## License
 
